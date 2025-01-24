@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('static')); // Serve static files from 'static' directory
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'static' directory
 
 // Configure OpenAI
 const openai = new OpenAI({
